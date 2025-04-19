@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover and download free fonts for designers and creators.">
+    <meta name="keywords" content="free fonts, font downloads, typography, design resources">
+    <meta name="author" content="FreeFont">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/logo/favicon.svg" type="image/x-icon">
+    <title>FreeFont – Discover and Download Free Fonts for Designers & Creators</title>
+
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00B8E9',
+                        'primary-dark': '#007EC3',
+                        secondary: '#313131',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- loader -->
+    <div id="loader" class="fixed top-0 left-0 w-full h-screen bg-white flex justify-center items-center z-50">
+        <div class="flex flex-col gap-4 items-center">
+            <div class="animate-pulse">
+                <img src="/assets/images/logo/freeFontLogo_Blue.svg" alt="logo" class="h-20 animate-bounce">
+            </div>
+        </div>
+    </div>
+
+    <!-- Ad banner -->
+    <section class="hidden bg-primary z-50">
+        <div class="max-w-[1400px] mx-auto px-3 py-4">
+            <div class="bg-white rounded-xl p-4 flex flex-col items-center">
+                <h2 class="text-xl font-bold text-gray-700 mb-4">Ad Banner</h2>
+                <p class="text-gray-700 text-center text-sm">This is an ad banner. You can place your ad content here.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- navbar -->
+    <nav class="sticky top-0 w-full h-16 flex items-center bg-white md:overflow-hidden overflow-unset z-50">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <div class="w-full flex justify-between items-center">
+                <div class="md:w-fit w-full md:justify-start justify-between items-center flex gap-4 z-20">
+                    <a href="/">
+                        <img class="h-10" src="../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <form action="" class="relative lg:max-w-[315px] max-w-[250px] w-full flex items-center">
+                            <input type="search" name="" id="" placeholder="Search..."
+                                class="w-full h-10 outline-none pl-4 pr-10 bg-gray-100 text-gray-700 text-sm font-light rounded-full">
+                            <button class="absolute right-3 text-gray-500 hover:text-primary">
+                                <i class="fi fi-rr-search inline-block translate-y-0.5"></i>
+                            </button>
+                        </form>
+                        <div id="toggleMenu" class="md:hidden block text-gray-500 text-lg cursor-pointer">
+                            <i class="fi fi-rr-bars-staggered inline-block translate-y-0.5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- desktop menu -->
+                <ul class="hidden w-fit md:flex text-gray-500 text-sm">
+                    <li>
+                        <a href="/" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Home</a>
+                    </li>
+                    <li>
+                        <a href="/fonts" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Fonts</a>
+                    </li>
+                    <li>
+                        <a href="/fonts/themes" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Themes</a>
+                    </li>
+                    <li>
+                        <a href="/authors" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Authors</a>
+                    </li>
+                    <li>
+                        <a href="/faqs" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="/login" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Login</a>
+                    </li>
+                </ul>
+
+                <!-- mobile menu -->
+                <ul id="menu"
+                    class="md:hidden absolute top-16 py-10 left-0 bg-white w-full flex flex-col items-center text-sm gap-4 -translate-y-[750px] rounded-b-3xl shadow-xl duration-300 ease-in-out z-10">
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-3 text-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="/fonts" class="py-2 lg:px-6 px-3 text-gray-700">Fonts</a>
+                    </li>
+                    <li>
+                        <a href="/fonts/themes" class="py-2 lg:px-6 px-3 text-gray-700">Themes</a>
+                    </li>
+                    <li>
+                        <a href="/authors" class="py-2 lg:px-6 px-3 text-gray-700">Authors</a>
+                    </li>
+                    <li>
+                        <a href="/faqs" class="py-2 lg:px-6 px-3 text-gray-700">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="/login" class="py-2 lg:px-6 px-3 text-gray-700">Login</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="relative md:py-8 sm:py-4">
+        <div class="max-w-[1400px] w-full m-auto sm:px-3">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-100 overflow-hidden">
+                        <div class="max-w-4xl mx-auto px-3 sm:py-20 py-10 bg-white rounded-xl shadow-sm">
+                            <!-- Header -->
+                            <div class="text-center sm:mb-20 mb-8">
+                                <h1 class="text-2xl font-bold text-gray-800 mb-2">Font Submission Agreement</h1>
+                                <small class="text-gray-600">Last updated: <span id="current-date">July 10,
+                                        2023</span></small>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-10">
+                                <!-- Guidelines Section -->
+                                <div class="ml-3">
+                                    <h3 class="font-medium text-gray-800 mb-2">
+                                        <i class="fi fi-rr-cloud-download-alt inline-block translate-y-0.5"></i>
+                                        Upload Guidelines
+                                    </h3>
+                                    <div class="text-[12px] text-gray-600 space-y-2">
+                                        <p>Please review these requirements before submitting your font</p>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Review Process:
+                                                </strong> Publication is not
+                                                automatic. Each font is carefully reviewed by our team before being
+                                                published.
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Character Set:
+                                                </strong> Fonts must include at
+                                                minimum a complete A-Z and a-z character set (Latin alphabet).
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Permanence:
+                                                </strong> Temporary fonts are not
+                                                accepted. Submitted fonts should remain available indefinitely and
+                                                not be
+                                                removed after publication.
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Originality:
+                                                </strong> You must be the original creator or have legal rights to
+                                                distribute the font.
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    File Format:
+                                                </strong> Acceptable formats: .ttf, .otf, .woff, .woff2 (or .zip
+                                                containing these formats). Maximum file size: 10MB per file (50MB for
+                                                ZIP
+                                                archives).
+                                            </li>
+
+                                        </ul>
+                                        <p class="italic bg-sky-100 text-sky-700 p-6 rounded-xl mt-2">
+                                            <strong>
+                                                Note:
+                                            </strong> Approval typically takes 3-5 business days. You'll
+                                            receive an email notification once your font has been reviewed.
+                                            Rejected submissions may be revised and resubmitted.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Agreement Section -->
+                                <div class="ml-3">
+                                    <h3 class="font-medium text-gray-800 mb-2">
+                                        <i class="fi fi-rr-cloud-download-alt inline-block translate-y-0.5"></i>
+                                        Upload Agreement
+                                    </h3>
+                                    <div class="text-[12px] text-gray-600 space-y-2">
+                                        <p>By submitting your font, you agree to the following terms</p>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Ownership & Rights:
+                                                </strong>You certify that you are the original creator of the font, OR
+                                                You have legal rights to distribute the font, AND You have obtained all
+                                                necessary permissions for included elements
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    License Grant:
+                                                </strong> By submitting your font, you grant this platform:
+                                                Non-exclusive rights to distribute your font.
+                                                Permission to display and promote your font. Right to convert file
+                                                formats for compatibility.
+                                                (You retain all copyright and may distribute elsewhere)
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Distribution Terms:
+                                                </strong> You agree that submitted fonts will remain available
+                                                indefinitely. Fonts may be bundled in collections or promotions.
+                                                Basic font information may be translated to other languages
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Removal Policy:
+                                                </strong>Fonts may only be removed For verified legal/copyright issues.
+                                                At platform's discretion for policy violations.
+                                                With 30 days notice for non-renewed commercial licenses.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Terms & Conditions Section -->
+                                <div class="ml-3">
+                                    <h3 class="font-medium text-gray-800 mb-2">
+                                        <i class="fi fi-rr-shield-check inline-block translate-y-0.5"></i>
+                                        Terms and Conditions
+                                    </h3>
+                                    <div class="text-[12px] text-gray-600 space-y-2">
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>
+                                                <strong class="font-medium">
+                                                    General Terms:
+                                                </strong> This platform reserves the right to reject any submission
+                                                without explanation.
+                                                Approval does not constitute endorsement of font quality. We may modify
+                                                these terms with 30 days notice.
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    User Responsibilities:
+                                                </strong> You are responsible for maintaining backup copies of your
+                                                files.
+                                                You must provide accurate contact information. You must promptly report
+                                                any errors or copyright issues.
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Privacy Policy:
+                                                </strong> We collect only necessary submission information.
+                                                Email addresses will only be used for submission-related communication.
+                                                Download statistics may be shared with font creators.
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Liability:
+                                                </strong> We are not responsible for misuse of downloaded fonts.
+                                                We do not guarantee specific download numbers.
+                                                Font creators are responsible for license enforcement.
+                                            </li>
+                                            <li>
+                                                <strong class="font-medium">
+                                                    Dispute Resolution:
+                                                </strong> Disputes will be resolved through mediation.
+                                                Claims must be filed within 90 days of issue.
+                                                This agreement is governed by your Country law.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Acceptance Checkbox -->
+                            <div class="hidden mt-8 pt-6 border-t border-gray-200">
+                                <div class="flex items-start">
+                                    <p class="text-xs text-gray-500 mt-1">By checking this box, you electronically
+                                        sign this agreement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- copyright -->
+    <section class="py-10">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <div class="flex md:flex-row flex-col justify-center items-center gap-3">
+                <small class="text-gray-500">&copy; <span id="copyright"></span> FreeFont. All rights reserved
+                </small>
+                <small class="text-gray-500">Font submission <a href="/agreement" class="text-primary">Agreement</a>
+                </small>
+            </div>
+        </div>
+    </section>
+
+    <!-- general scripts -->
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
