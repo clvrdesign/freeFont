@@ -100,21 +100,24 @@
 
                 <!-- mobile menu -->
                 <ul id="menu"
-                    class="md:hidden absolute top-16 py-10 left-0 bg-primary w-full flex flex-col items-center text-white text-sm gap-4 -translate-y-[750px] duration-300 ease-in-out z-10">
+                    class="md:hidden absolute top-16 py-10 left-0 bg-white w-full flex flex-col items-center text-sm gap-4 -translate-y-[750px] rounded-b-3xl shadow-xl duration-300 ease-in-out z-10">
                     <li>
-                        <a href="/" class="py-2 lg:px-6 px-3 text-gray-700">New fonts</a>
+                        <a href="/" class="py-2 lg:px-6 px-3 text-gray-700">Home</a>
                     </li>
                     <li>
-                        <a href="/themes" class="py-2 lg:px-6 px-3">Themes</a>
+                        <a href="/fonts" class="py-2 lg:px-6 px-3 text-primary">Fonts</a>
                     </li>
                     <li>
-                        <a href="/authors" class="py-2 lg:px-6 px-3">Authors</a>
+                        <a href="/fonts/themes" class="py-2 lg:px-6 px-3 text-gray-700">Themes</a>
                     </li>
                     <li>
-                        <a href="/faqs" class="py-2 lg:px-6 px-3">FAQs</a>
+                        <a href="/authors" class="py-2 lg:px-6 px-3 text-gray-700">Authors</a>
                     </li>
                     <li>
-                        <a href="/register/" class="py-2 lg:px-6 px-3">Sign Up</a>
+                        <a href="/faqs" class="py-2 lg:px-6 px-3 text-gray-700">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="/register" class="py-2 lg:px-6 px-3 text-gray-700">Sign Up</a>
                     </li>
                 </ul>
 
@@ -126,17 +129,20 @@
     <section class="sticky md:top-12 top-0 md:py-4 my-0 z-20">
         <div class="max-w-[1400px] w-full m-auto px-3">
             <!-- Filter Panel -->
-            <div id="filterBtn" class="md:hidden block fixed top-1/2 -left-6 h-8 w-fit bg-primary text-white pt-1 px-4 rounded-b-xl -rotate-90 text-gray-700 cursor-pointer z-50">
-                Filters
+            <div class="relative w-full">
+                <div id="filterBtn"
+                    class="md:hidden block absolute top-0 mt-4 sm:w-fit w-full text-center bg-primary hover:primary-dark text-white px-4 py-2 rounded-xl text-gray-700 cursor-pointer">
+                    <i class="fi fi-rr-filters inline-block translate-y-0.5 mr-1"></i>
+                    Filters
+                </div>
             </div>
-            <div
-            id="filterContainer"
+            <div id="filterContainer"
                 class="md:relative fixed md:top-0 top-16 left-0 bg-white md:w-full w-[275px] md:-translate-x-0 -translate-x-[275px] duration-300 md:h-auto h-screen flex md:flex-row flex-col md:justify-between justify-start md:items-center items-start gap-4 px-4 py-4 md:rounded-2xl rounded-none shadow md:shadow-none z-20">
                 <div class="md:w-fit w-full flex justify-between">
                     <div>
                         <h2 class="text-xl font-medium text-gray-800">
-                            <i class="fi fi-rr-settings-sliders inline-block translate-y-0.5 mr-2"></i>
-                            Filter
+                            <i class="fi fi-rr-filters inline-block translate-y-0.5 mr-1"></i>
+                            Filters
                         </h2>
                         <p class="text-sm text-gray-500 mt-1">Filter by categories</p>
                     </div>
@@ -144,7 +150,7 @@
                         <i class="fi fi-rr-cross-small text-2xl"></i>
                     </div>
                 </div>
-                
+
                 <div
                     class="md:w-fit w-full flex md:flex-row flex-col gap-4 md:items-center items-start md:justify-between">
 
@@ -155,14 +161,14 @@
                             class="px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
                     </div>
 
-                    <!-- Font Size -->
+                    <!-- Font style -->
                     <div class="w-full flex flex-col gap-1">
-                        <label for="font-size" class="text-sm text-gray-700">Font size</label>
+                        <label for="font-size" class="text-sm text-gray-700">Font style</label>
                         <select id="font-size"
                             class="px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
+                            <option value="small">Serif</option>
+                            <option value="medium">Serif Sans</option>
+                            <option value="large">Handwritten</option>
                         </select>
                     </div>
 
@@ -179,11 +185,23 @@
                             <option value="unknown">Unknown</option>
                         </select>
                     </div>
+
+                    <!-- Apply button -->
+                    <div class="w-full flex flex-col gap-1">
+                        <label class="text-sm text-gray-700 opacity-0">Apply Filter</label>
+                        <button id="font-size"
+                            class="px-3 py-2 text-sm text-white bg-primary rounded-lg outline-none duration-300">
+                            <i class="fi fi-rr-filter inline-block translate-y-0.5 mr-1"></i>
+                            Apply
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <!-- Overlay Background for Mobile -->
-            <div id="overlay" class="fixed top-0 left-0 w-full h-screen bg-gray-950 bg-opacity-30 translate-x-[100%] md:translate-x-[100%] z-10 transition duration-300"></div>
+            <div id="overlay"
+                class="fixed top-0 left-0 w-full h-screen bg-gray-950 bg-opacity-30 translate-x-[100%] md:translate-x-[100%] z-10 transition duration-300">
+            </div>
 
         </div>
     </section>
@@ -191,10 +209,10 @@
     <!-- Recent fonts -->
     <section class="py-10">
         <div class="max-w-[1400px] w-full m-auto px-3">
-            <h2 class="text-2xl md:text-left text-center text-gray-700 font-semibold mb-4">
+            <h2 class="hidden text-2xl md:text-left text-center text-gray-700 font-semibold mb-4">
                 Recent Fonts
             </h2>
-            <div class="grid grid-cols-1 gap-4 mb-8">
+            <div class="grid grid-cols-1 gap-4 my-8">
                 <!-- A single font -->
                 <div class="bg-white rounded-2xl px-4 py-4 shadow-lg shadow-gray-200">
                     <div class="text-gray-500 flex justify-between mb-2">
