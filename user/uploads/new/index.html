@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover and download free fonts for designers and creators.">
+    <meta name="keywords" content="free fonts, font downloads, typography, design resources">
+    <meta name="author" content="FreeFont">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="shortcut icon" href="../../../assets/images/logo/favicon.svg" type="image/x-icon">
+    <title>FreeFont – Discover and Download Free Fonts for Designers & Creators</title>
+
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00B8E9',
+                        'primary-dark': '#007EC3',
+                        secondary: '#313131',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- loader -->
+    <div id="loader" class="fixed top-0 left-0 w-full h-screen bg-white flex justify-center items-center z-50">
+        <div class="flex flex-col gap-4 items-center">
+            <div class="animate-pulse">
+                <img src="../../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo" class="h-20 animate-bounce">
+            </div>
+        </div>
+    </div>
+
+    <!-- Ad banner -->
+    <section class="hidden bg-primary z-50">
+        <div class="max-w-[1400px] mx-auto px-3 py-4">
+            <div class="bg-white rounded-xl p-4 flex flex-col items-center">
+                <h2 class="text-xl font-bold text-gray-700 mb-4">Ad Banner</h2>
+                <p class="text-gray-700 text-center text-sm">This is an ad banner. You can place your ad content here.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- navbar -->
+    <nav class="sticky top-0 w-full h-16 flex items-center bg-white md:overflow-hidden overflow-unset z-50">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <div class="w-full flex justify-between items-center">
+                <div class="md:w-fit w-full md:justify-start justify-between items-center flex gap-4 z-20">
+                    <a href="/">
+                        <img class="h-10" src="../../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <form action="" class="relative lg:max-w-[315px] max-w-[250px] w-full flex items-center">
+                            <input type="search" name="" id="" placeholder="Search..."
+                                class="w-full h-10 outline-none pl-4 pr-10 bg-gray-100 text-gray-700 text-sm font-light rounded-full">
+                            <button class="absolute right-3 text-gray-500 hover:text-primary">
+                                <i class="fi fi-rr-search inline-block translate-y-0.5"></i>
+                            </button>
+                        </form>
+                        <div id="toggleMenu" class="md:hidden block text-gray-500 text-lg cursor-pointer">
+                            <i class="fi fi-rr-bars-staggered inline-block translate-y-0.5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- desktop menu -->
+                <ul class="hidden w-fit md:flex text-gray-500 text-sm">
+                    <li>
+                        <a href="/" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Home</a>
+                    </li>
+                    <li>
+                        <a href="/fonts" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Fonts</a>
+                    </li>
+                    <li>
+                        <a href="/fonts/themes" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Themes</a>
+                    </li>
+                    <li>
+                        <a href="/authors" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Authors</a>
+                    </li>
+                    <li>
+                        <a href="/faqs" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="/login" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Login</a>
+                    </li>
+                </ul>
+
+                <!-- mobile menu -->
+                <ul id="menu"
+                    class="md:hidden absolute top-16 py-10 left-0 bg-white w-full flex flex-col items-center text-sm gap-4 -translate-y-[750px] rounded-b-3xl shadow-xl duration-300 ease-in-out z-10">
+                    <li>
+                        <a href="/" class="py-2 lg:px-6 px-3 text-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="/fonts" class="py-2 lg:px-6 px-3 text-gray-700">Fonts</a>
+                    </li>
+                    <li>
+                        <a href="/fonts/themes" class="py-2 lg:px-6 px-3 text-gray-700">Themes</a>
+                    </li>
+                    <li>
+                        <a href="/authors" class="py-2 lg:px-6 px-3 text-gray-700">Authors</a>
+                    </li>
+                    <li>
+                        <a href="/faqs" class="py-2 lg:px-6 px-3 text-gray-700">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="/login" class="py-2 lg:px-6 px-3 text-gray-700">Login</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="relative md:py-8 sm:py-4">
+        <div class="max-w-[1400px] w-full m-auto sm:px-3">
+            <div class="flex flex-col md:flex-row gap-4">
+                <!-- Sidebar Navigation -->
+                <aside class="sm:sticky sm:top-16 fixed left-0 bottom-0 w-full md:w-64 flex-shrink-0 z-20">
+                    <div
+                        class="bg-white sm:rounded-2xl rounded-none md:shadow-lg md:shadow-gray-100 sm:px-5 md:py-8 sm:py-4 py-0">
+                        <h2 class="md:block hidden text-xl font-bold text-gray-700 mb-8">My Account</h2>
+                        <nav
+                            class="sm:space-y-3 md:block flex justify-between items-center text-gray-700 text-sm sm:py-0 py-2">
+                            <a href="/user/profile"
+                                class="flex items-center sm:flex-row flex-col px-4 py-2 rounded-lg text-gray-600 duration-300 sm:hover:bg-gray-100">
+                                <i class="fi fi-rr-user mt-0.5 mr-1"></i>
+                                <small class="sm:text-sm text-xs">Profile</small>
+                            </a>
+                            <a href="/user/favorites"
+                                class="flex items-center sm:flex-row flex-col px-4 py-2 rounded-lg text-gray-600 duration-300 sm:hover:bg-gray-100">
+                                <i class="fi fi-rr-heart mt-0.5 mr-1"></i>
+                                <small class="sm:text-sm text-xs">Favorites</small>
+                            </a>
+                            <a href="/user/uploads"
+                                class="flex items-center sm:flex-row flex-col px-4 py-2 rounded-lg text-primary duration-300 sm:hover:bg-gray-100">
+                                <i class="fi fi-rr-cloud-upload-alt mt-0.5 mr-1"></i>
+                                <small class="sm:text-sm text-xs">Uploads</small>
+                            </a>
+                            <a href="/user/settings"
+                                class="flex items-center sm:flex-row flex-col px-4 py-2 rounded-lg text-gray-600 duration-300 sm:hover:bg-gray-100">
+                                <i class="fi fi-rr-settings mt-0.5 mr-1"></i>
+                                <small class="sm:text-sm text-xs">Settings</small>
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Upload Content -->
+                <div class="flex-1">
+                    <div class="bg-white rounded-2xl shadow-lg shadow-gray-100 overflow-hidden">
+                        <!-- Profile Header -->
+                        <div class="bg-white sm:px-6 px-3 py-4 border-b border-gray-100">
+                            <h2 class="text-xl font-bold text-gray-700">Upload New Font</h2>
+                            <small class="text-gray-500">Upload your font files to add them to the library</small>
+                        </div>
+
+                        <!-- Upload Form -->
+                        <div class="md:p-6 p-3">
+
+                            <!-- Upload Agreement -->
+                            <div class="border border-amber-400 bg-amber-50 rounded-2xl p-4 mb-0">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 text-amber-500">
+                                        <i class="fi fi-rr-triangle-warning inline-block translate-y-0.5"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="font-medium text-amber-800 mb-2">Submission Agreement</h3>
+                                        <div class="text-[12px] text-amber-700 space-y-2">
+                                            <p>By submitting your font, you certify that:</p>
+                                            <ul class="list-disc pl-5 space-y-1">
+                                                <li>You are the original author of the font</li>
+                                                <li>You hold all necessary publishing rights</li>
+                                                <li>You grant FreeFont permission to distribute it</li>
+                                            </ul>
+                                            <p class="italic mt-2">Note: FreeFont cannot control how users employ
+                                                downloaded fonts and declines responsibility for misuse.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Upload Form -->
+                            <form action="" method="POST" enctype="multipart/form-data" class="flex gap-4 py-6">
+                                <div class="w-full flex lg:flex-row flex-col lg:gap-6 gap-3">
+                                    <!-- Left Side -->
+                                    <div class="lg:w-2/6 w-full">
+                                        <!-- Drag & Drop Zone -->
+                                        <div
+                                            class="w-full border border-dashed border-gray-300 hover:border-primary rounded-2xl p-8 text-center mb-6 bg-gray-50 transition-colors duration-200">
+                                            <div class="flex flex-col items-center justify-center">
+                                                <label for="fontFile" class="cursor-pointer">
+                                                    <div class="text-4xl text-gray-400 mb-4">
+                                                        <i class="bi bi-cloud-arrow-up"></i>
+                                                    </div>
+                                                    <p class="text-[12px] text-gray-400 mb-2">(TTF, OTF, WOFF, WOFF2,
+                                                        ZIP)</p>
+                                                    <p class="text-sm text-gray-600 mb-2">Drag and drop your font files
+                                                        here or</p>
+                                                    <p class="text-sm text-primary mb-4 underline">Browse files</p>
+                                                    <input id="fontFile" name="fontFile" type="file"
+                                                        accept=".ttf, .otf, .woff, .woff2, .zip" multiple class="hidden"
+                                                        required aria-label="Upload font file">
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Selected Files Preview -->
+                                        <div id="filePreview" class="hidden mb-6">
+                                            <h3 class="text-md font-medium text-gray-700 mb-3">Selected Files</h3>
+                                            <ul id="fileList" class="space-y-2">
+                                                <!-- Files will be listed here dynamically -->
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right Side -->
+                                    <div class="lg:w-4/6 w-full">
+                                        <!-- Font Metadata -->
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                                            <div>
+                                                <label for="fontDescription"
+                                                    class="text-xs text-gray-500 mb-1">Theme</label>
+                                                <select id="fontWeight" name="fontWeight"
+                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"
+                                                    required>
+                                                    <option selected disabled></option>
+                                                    <option value="Fancy">Fancy</option>
+                                                    <option value="Script">Script</option>
+                                                    <option value="Techno">Techno</option>
+                                                    <option value="Gothic">Gothic</option>
+                                                    <option value="Basic">Basic</option>
+                                                    <option value="Bitmap">Bitmap</option>
+                                                    <option value="Holiday">Holiday</option>
+                                                    <option value="Foreign Look">Foreign Look</option>
+                                                    <option value="Dingbats">Dingbats</option>
+                                                    <option value="Symbol">Symbol</option>
+                                                    <option value="Retro">Retro</option>
+                                                    <option value="Typewriter">Typewriter</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label for="fontDescription"
+                                                    class="text-xs text-gray-500 mb-1">Style</label>
+                                                <select id="fontStyle" name="fontStyle"
+                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"
+                                                    required>
+                                                    <option selected disabled></option>
+                                                    <option value="Calligraphy">Calligraphy</option>
+                                                    <option value="School">School</option>
+                                                    <option value="Handwritten">Handwritten</option>
+                                                    <option value="Brush">Brush</option>
+                                                    <option value="Trash">Trash</option>
+                                                    <option value="Graffiti">Graffiti</option>
+                                                    <option value="Old School">Old School</option>
+                                                    <option value="Various">Various</option>
+                                                </select>
+                                            </div>
+                                            <div class="md:col-span-2">
+                                                <label for="fontDescription"
+                                                    class="text-xs text-gray-500 mb-1">License</label>
+                                                <select id="fontStyle" name="fontStyle"
+                                                    class="w-full text-sm text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"
+                                                    required>
+                                                    <option selected disabled></option>
+                                                    <option value="free">100% Free</option>
+                                                    <option value="personal">Free for Personal Use</option>
+                                                    <option value="commercial">Free for Commercial Use</option>
+                                                    <option value="donationware">Donationware</option>
+                                                    <option value="shareware">Shareware</option>
+                                                    <option value="demo">Demo</option>
+                                                    <option value="public_domain">Public Domain</option>
+                                                    <option value="ofl">Open Font License (OFL)</option>
+                                                    <option value="custom">Custom License</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="md:col-span-2">
+                                                <label for="fontDescription" class="text-xs text-gray-500 mb-1">Note of
+                                                    the author</label>
+                                                <textarea id="fontDescription" name="fontDescription" rows="3"
+                                                    class="w-full min-h-40 text-sm font-light text-gray-700 bg-gray-100 outline-none border border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"
+                                                    placeholder="Write a short description about your font..."
+                                                    required></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <div class="flex items-start">
+                                                <div class="flex items-center h-5 mt-1">
+                                                    <input id="agreement-checkbox" type="checkbox"
+                                                        class="border-gray-300 rounded focus:ring-blue-500"
+                                                        required>
+                                                </div>
+                                                <div class="ml-3">
+                                                    <label for="agreement-checkbox" class="text-xs text-gray-500 mt-1">
+                                                        By checking this box, you electronically sign this 
+                                                        <a class="text-primary" href="/agreement">
+                                                          agreement
+                                                        </a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Submit Button -->
+                                        <div class="flex justify-end space-x-3">
+                                            <button type="submit"
+                                                class="sm:w-fit w-full bg-primary text-white text-sm py-2 px-6 rounded-lg transition duration-200 hover:bg-primary/90 flex justify-center items-center">
+                                                <i class="fi fi-rr-cloud-upload-alt inline-block translate-y-0.5 mr-1"></i>
+                                                Upload
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- copyright -->
+    <section class="py-10 sm:mb-0 mb-14">
+        <div class="max-w-[1400px] w-full m-auto px-3">
+            <div class="flex md:flex-row flex-col justify-center items-center gap-3">
+                <small class="text-gray-500">&copy; <span id="copyright"></span> FreeFont. All rights reserved
+                </small>
+                <small class="text-gray-500">Font submission <a href="/agreement" class="text-primary">Agreement</a>
+                </small>
+            </div>
+        </div>
+    </section>
+
+    <!-- general scripts -->
+    <script src="../../../assets/js/script.js"></script>
+
+</body>
+
+</html>
