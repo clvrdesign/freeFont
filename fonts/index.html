@@ -7,8 +7,8 @@
     <meta name="description" content="Discover and download free fonts for designers and creators.">
     <meta name="keywords" content="free fonts, font downloads, typography, design resources">
     <meta name="author" content="FreeFont">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/logo/favicon.svg" type="image/x-icon">
     <title>FreeFont – Discover and Download Free Fonts for Designers & Creators</title>
 
     <!-- Bootstrap Icons-->
@@ -59,7 +59,7 @@
             <div class="w-full flex justify-between items-center">
                 <div class="md:w-fit w-full md:justify-start justify-between items-center flex gap-4 z-20">
                     <a href="/">
-                        <img class="h-10" src="assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
+                        <img class="h-10" src="../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
                     </a>
                     <div class="flex items-center gap-3">
                         <form action="" class="relative lg:max-w-[315px] max-w-[250px] w-full flex items-center">
@@ -78,10 +78,10 @@
                 <!-- desktop menu -->
                 <ul class="hidden w-fit md:flex text-gray-500 text-sm">
                     <li>
-                        <a href="/" class="py-[25px] lg:px-6 px-3 bg-primary/5 text-primary">Home</a>
+                        <a href="/" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Home</a>
                     </li>
                     <li>
-                        <a href="/fonts" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Fonts</a>
+                        <a href="/fonts" class="py-[25px] lg:px-6 px-3 bg-primary/5 text-primary">Fonts</a>
                     </li>
                     <li>
                         <a href="/fonts/themes" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Themes</a>
@@ -122,24 +122,69 @@
         </div>
     </nav>
 
-    <!-- hero section -->
-    <section class="my-4">
+    <!-- Preview & Filters -->
+    <section class="sticky md:top-12 top-0 md:py-4 my-0 z-20">
         <div class="max-w-[1400px] w-full m-auto px-3">
+            <!-- Filter Panel -->
+            <div id="filterBtn" class="md:hidden block fixed top-1/2 -left-6 h-8 w-fit bg-primary text-white pt-1 px-4 rounded-b-xl -rotate-90 text-gray-700 cursor-pointer z-50">
+                Filters
+            </div>
             <div
-                class="relative md:h-[375px] h-[315px] w-full flex items-center justify-between bg-gray-50 rounded-[25px] overflow-hidden">
-                <div id="hero"
-                    class="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-primary-dark to-primary">
-                    <img class="h-full w-full object-cover opacity-20 mix-blend-multiply grayscale"
-                        src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="">
+            id="filterContainer"
+                class="md:relative fixed md:top-0 top-16 left-0 bg-white md:w-full w-[275px] md:-translate-x-0 -translate-x-[275px] duration-300 md:h-auto h-screen flex md:flex-row flex-col md:justify-between justify-start md:items-center items-start gap-4 px-4 py-4 md:rounded-2xl rounded-none shadow md:shadow-none z-20">
+                <div class="md:w-fit w-full flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-medium text-gray-800">
+                            <i class="fi fi-rr-settings-sliders inline-block translate-y-0.5 mr-2"></i>
+                            Filter
+                        </h2>
+                        <p class="text-sm text-gray-500 mt-1">Filter by categories</p>
+                    </div>
+                    <div id="caretBtn" class="md:hidden block text-gray-700 cursor-pointer">
+                        <i class="fi fi-rr-cross-small text-2xl"></i>
+                    </div>
                 </div>
-                <div class="max-w-[1400px] w-full m-auto px-3 z-10">
-                    <h1
-                        class="md:max-w-[550px] max-w-[375px] m-auto md:text-5xl text-3xl text-white font-bold text-center">
-                        Download our Premium Font for Free Wherever You Are.
-                    </h1>
+                
+                <div
+                    class="md:w-fit w-full flex md:flex-row flex-col gap-4 md:items-center items-start md:justify-between">
+
+                    <!-- Preview Text -->
+                    <div class="md:w-fit w-full flex flex-col gap-1">
+                        <label for="font-preview" class="text-sm text-gray-700">Preview</label>
+                        <input type="text" id="font-preview" placeholder="Type your text here"
+                            class="px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
+                    </div>
+
+                    <!-- Font Size -->
+                    <div class="w-full flex flex-col gap-1">
+                        <label for="font-size" class="text-sm text-gray-700">Font size</label>
+                        <select id="font-size"
+                            class="px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+
+                    <!-- Licence Type -->
+                    <div class="w-full flex flex-col gap-1">
+                        <label for="font-license" class="text-sm text-gray-700">Licence</label>
+                        <select id="font-license"
+                            class="px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
+                            <option value="free">Free</option>
+                            <option value="demo">Demo</option>
+                            <option value="shareware">Shareware</option>
+                            <option value="commercial">Commercial use</option>
+                            <option value="personal">Personal use</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </div>
                 </div>
             </div>
+
+            <!-- Overlay Background for Mobile -->
+            <div id="overlay" class="fixed top-0 left-0 w-full h-screen bg-gray-950 bg-opacity-30 translate-x-[100%] md:translate-x-[100%] z-10 transition duration-300"></div>
+
         </div>
     </section>
 
@@ -304,160 +349,6 @@
         </div>
     </section>
 
-    <!--Most downloaded fonts -->
-    <section class="py-10">
-        <div class="max-w-[1400px] w-full m-auto px-3">
-            <h2 class="text-2xl md:text-left text-center text-gray-700 font-semibold mb-4">
-                Most downloaded Fonts
-            </h2>
-            <div class="grid grid-cols-1 gap-4 mb-8">
-                <!-- A single font -->
-                <div class="bg-white rounded-2xl px-4 py-4 shadow-lg shadow-gray-200">
-                    <div class="text-gray-500 flex justify-between mb-2">
-                        <small class="">
-                            Candle Easter by Jack Zadesh
-                        </small>
-                        <small class="text-primary">
-                            Script > Various
-                        </small>
-                    </div>
-                    <div class="flex sm:flex-row flex-col justify-between">
-                        <div class="max-w-[450px] sm:py-0 py-4">
-                            <img class="w-ful" src="https://www.dafont.com/img/preview/c/a/candles_in_easter0.png"
-                                alt="font1">
-                        </div>
-                        <div class="flex flex-col items-end gap-2">
-                            <small class="text-gray-500 text-right">14.254 downloads</small>
-                            <button
-                                class="bg-gray-300 w-fit flex items-center gap-1 py-2 px-4 rounded-md text-gray-600 text-sm duration-300 hover:bg-primary hover:text-white">
-                                <i class="bi bi-cloud-arrow-down text-lg"></i> Download
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- A single font -->
-                <div class="bg-white rounded-2xl px-4 py-4 shadow-lg shadow-gray-200">
-                    <div class="text-gray-500 flex justify-between mb-2">
-                        <small class="">
-                            Anaconda by Awa Melvine
-                        </small>
-                        <small class="text-primary">
-                            Script > Various
-                        </small>
-                    </div>
-                    <div class="flex sm:flex-row flex-col justify-between">
-                        <div class="max-w-[450px] sm:py-0 py-4">
-                            <img class="w-ful" src="http://dafont.com/img/preview/a/n/anaconda_wildstyle0.png"
-                                alt="font1">
-                        </div>
-                        <div class="flex flex-col items-end gap-2">
-                            <small class="text-gray-500 text-right">3.857 downloads</small>
-                            <button
-                                class="bg-gray-300 w-fit flex items-center gap-1 py-2 px-4 rounded-md text-gray-600 text-sm duration-300 hover:bg-primary hover:text-white">
-                                <i class="bi bi-cloud-arrow-down text-lg"></i> Download
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- A single font -->
-                <div class="bg-white rounded-2xl px-4 py-4 shadow-lg shadow-gray-200">
-                    <div class="text-gray-500 flex justify-between mb-2">
-                        <small class="">
-                            Sakitu Baelah by Jack Zadesh
-                        </small>
-                        <small class="text-primary">
-                            Script > Various
-                        </small>
-                    </div>
-                    <div class="flex sm:flex-row flex-col justify-between">
-                        <div class="max-w-[450px] sm:py-0 py-4">
-                            <img class="w-ful" src="http://dafont.com/img/preview/s/a/sakitu_baelah_clean0.png"
-                                alt="font1">
-                        </div>
-                        <div class="flex flex-col items-end gap-2">
-                            <small class="text-gray-500 text-right">1.582 downloads</small>
-                            <button
-                                class="bg-gray-300 w-fit flex items-center gap-1 py-2 px-4 rounded-md text-gray-600 text-sm duration-300 hover:bg-primary hover:text-white">
-                                <i class="bi bi-cloud-arrow-down text-lg"></i> Download
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- A single font -->
-                <div class="bg-white rounded-2xl px-4 py-4 shadow-lg shadow-gray-200">
-                    <div class="text-gray-500 flex justify-between mb-2">
-                        <small class="">
-                            Jackal Holidays by Emily Rose
-                        </small>
-                        <small class="text-primary">
-                            Script > Various
-                        </small>
-                    </div>
-                    <div class="flex sm:flex-row flex-col justify-between">
-                        <div class="max-w-[450px] sm:py-0 py-4">
-                            <img class="w-ful" src="https://www.dafont.com/img/preview/j/a/jackal_holiday5.png"
-                                alt="font1">
-                        </div>
-                        <div class="flex flex-col items-end gap-2">
-                            <small class="text-gray-500 text-right">5.485 downloads</small>
-                            <button
-                                class="bg-gray-300 w-fit flex items-center gap-1 py-2 px-4 rounded-md text-gray-600 text-sm duration-300 hover:bg-primary hover:text-white">
-                                <i class="bi bi-cloud-arrow-down text-lg"></i> Download
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- A single font -->
-                <div class="bg-white rounded-2xl px-4 py-4 shadow-lg shadow-gray-200">
-                    <div class="text-gray-500 flex justify-between mb-2">
-                        <small class="">
-                            Barethelly by Clever Designer
-                        </small>
-                        <small class="text-primary">
-                            Script > Various
-                        </small>
-                    </div>
-                    <div class="flex sm:flex-row flex-col justify-between">
-                        <div class="max-w-[450px] sm:py-0 py-4">
-                            <img class="w-ful" src="https://www.dafont.com/img/preview/b/a/barethelly_signature0.png"
-                                alt="font1">
-                        </div>
-                        <div class="flex flex-col items-end gap-2">
-                            <small class="text-gray-500 text-right">21.254 downloads</small>
-                            <button
-                                class="bg-gray-300 w-fit flex items-center gap-1 py-2 px-4 rounded-md text-gray-600 text-sm duration-300 hover:bg-primary hover:text-white">
-                                <i class="bi bi-cloud-arrow-down text-lg"></i> Download
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ad banner -->
-    <section class="py-4">
-        <div class="max-w-[1400px] mx-auto px-3 py-4">
-            <div
-                class="relative bg-white rounded-3xl px-4 py-8 min-h-60 flex flex-col justify-center items-center overflow-hidden">
-                <h2 class="text-xl font-bold text-gray-700 mb-2">Ad Banner</h2>
-                <p class="text-gray-700 text-center text-sm">This is an ad banner. You can place your ad content here.
-                </p>
-                <label
-                    class="absolute top-6 -right-10 bg-gradient-to-l from-primary-dark to-primary text-white w-[150px] rotate-[45deg] text-sm py-1 text-center">Sponsored</label>
-            </div>
-        </div>
-    </section>
-
     <!-- Newsletter -->
     <section class="py-4">
         <div class="max-w-[1400px] w-full m-auto px-3">
@@ -490,7 +381,7 @@
     </section>
 
     <!-- general scripts -->
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 
 </body>
 
