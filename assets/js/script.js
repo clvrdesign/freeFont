@@ -77,22 +77,12 @@ const overlay = document.getElementById('overlay');
 
 // Open Filter
 filterBtn.addEventListener('click', () => {
-  filterContainer.classList.remove('-translate-x-[275px]');
-  filterContainer.classList.add('translate-x-0');
-  
-  overlay.classList.remove('translate-x-[100%]');
-  overlay.classList.add('translate-x-0');
-  
-  filterBtn.classList.add('hidden'); // hide open button
+  filterContainer.classList.toggle('hidden');
+  overlay.classList.toggle('hidden');
 });
 
 // Close Filter
 caretBtn.addEventListener('click', () => {
-  filterContainer.classList.remove('translate-x-0');
-  filterContainer.classList.add('-translate-x-[275px]');
-  
-  overlay.classList.remove('translate-x-0');
-  overlay.classList.add('translate-x-[100%]');
-  
-  filterBtn.classList.remove('hidden'); // show open button
+  filterContainer.classList.toggle('hidden');
+  overlay.classList.toggle('hidden');
 });
