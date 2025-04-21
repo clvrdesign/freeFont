@@ -7,8 +7,8 @@
     <meta name="description" content="Discover and download free fonts for designers and creators.">
     <meta name="keywords" content="free fonts, font downloads, typography, design resources">
     <meta name="author" content="FreeFont">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="shortcut icon" href="../../assets/images/logo/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="shortcut icon" href="../../../assets/images/logo/favicon.svg" type="image/x-icon">
     <title>FreeFont – Discover and Download Free Fonts for Designers & Creators</title>
 
     <!-- Bootstrap Icons-->
@@ -37,7 +37,7 @@
     <div id="loader" class="fixed top-0 left-0 w-full h-screen bg-white flex justify-center items-center z-50">
         <div class="flex flex-col gap-4 items-center">
             <div class="animate-pulse">
-                <img src="../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo" class="h-20 animate-bounce">
+                <img src="../../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo" class="h-20 animate-bounce">
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@
             <div class="w-full flex justify-between items-center">
                 <div class="md:w-fit w-full md:justify-start justify-between items-center flex gap-4 z-20">
                     <a href="/">
-                        <img class="h-10" src="../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
+                        <img class="h-10" src="../../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
                     </a>
                     <div class="flex items-center gap-3">
                         <form action="" class="relative lg:max-w-[315px] max-w-[250px] w-full flex items-center">
@@ -125,109 +125,74 @@
         </div>
     </nav>
 
-    <!-- Single font view -->
-    <section class="py-10">
+
+    <section class="py-8">
         <div class="max-w-[1400px] w-full m-auto px-3">
-            <!-- Font Header -->
-            <div class="bg-white rounded-2xl px-4 py-4 mb-4">
-                <div class="text-gray-500 flex justify-between mb-2">
-                    <small class="">
-                        Candle Easter by Jack Zadesh
-                    </small>
-                    <small class="text-primary">
-                        Script > Various
-                    </small>
-                </div>
-                <div class="flex sm:flex-row flex-col justify-between">
-                    <div class="max-w-[450px] sm:py-0 py-4">
-                        <img class="w-ful" src="https://www.dafont.com/img/preview/c/a/candles_in_easter0.png"
-                            alt="font1">
+            <h1 class="text-2xl font-bold text-gray-800 mb-6">Upload New Font</h1>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg shadow-gray-200">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Font Name</label>
+                            <input type="text" class="w-full border border-gray-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2">Designer</label>
+                            <input type="text" class="w-full border border-gray-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2">Categories</label>
+                            <select multiple class="w-full border border-gray-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent h-auto">
+                                <option>Script</option>
+                                <option>Sans-serif</option>
+                                <option>Display</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2">License</label>
+                            <select class="w-full border border-gray-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option>SIL Open Font License</option>
+                                <option>Creative Commons</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-end gap-2">
-                        <small class="text-gray-500 text-right">14.254 downloads</small>
-                        <button
-                            class="bg-gray-300 w-fit flex items-center gap-1 py-2 px-4 rounded-md text-gray-600 text-sm duration-300 hover:bg-primary hover:text-white">
-                            <i class="bi bi-cloud-arrow-down text-lg"></i> Download
+                    
+                    <!-- Font Files Upload -->
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Font Files</label>
+                        <div class="border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center">
+                            <i class="bi bi-cloud-arrow-up text-4xl text-gray-300 mb-2"></i>
+                            <p class="text-gray-500 mb-2">Drag & drop font files here</p>
+                            <p class="text-gray-400 text-sm mb-4">TTF, OTF, WOFF formats supported</p>
+                            <button type="button" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded">
+                                Select Files
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Preview Image -->
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Preview Image</label>
+                        <div class="border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center">
+                            <i class="bi bi-image text-4xl text-gray-300 mb-2"></i>
+                            <p class="text-gray-500 mb-2">Upload a preview image</p>
+                            <p class="text-gray-400 text-sm mb-4">PNG or JPG, 800x400px recommended</p>
+                            <button type="button" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded">
+                                Select Image
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg">
+                            Upload Font
                         </button>
                     </div>
-                </div>
-
-            </div>
-
-
-            <!-- Font Preview -->
-            <div class="bg-white rounded-2xl px-6 py-6 mb-4">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">Preview</h2>
-                <div class="mb-4">
-                    <textarea
-                        class="w-full rounded-lg focus:outline-none resize-none"
-                        style="font-family: 'Candle Easter'; font-size: 24px; min-height: 150px;">The quick brown fox jumps over the lazy dog</textarea>
-                </div>
-                <div class="flex gap-4 mb-4">
-                    <!-- Font size -->
-                    <div class="sm:w-fit w-full flex flex-col gap-1">
-                        <label for="font-size" class="text-sm text-gray-700">Font size</label>
-                        <select id="font-size"
-                            class="sm:w-fit w-full px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
-                            <option value="small">Tinny</option>
-                            <option value="medium">Small</option>
-                            <option value="large">Medium</option>
-                            <option value="large">Large</option>
-                        </select>
-                    </div>
-                    <!-- Background -->
-                    <div class="w-full flex flex-col gap-1">
-                        <label for="font-size" class="text-sm text-gray-700">Background</label>
-                        <select id="font-size"
-                            class="sm:w-fit w-full px-3 py-2 text-sm font-light text-gray-700 border border-gray-200 bg-gray-100 rounded-lg outline-none focus:border-gray-300 transition duration-300">
-                            <option value="small">White</option>
-                            <option value="large">Black</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Character Set -->
-            <div class="bg-white rounded-2xl px-6 py-6 mb-8">
-                <h2 class="text-xl font-semibold text-gray-700 mb-4">Character Set</h2>
-                <div class="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-2">
-                    <!-- Repeat for each character -->
-                    <div class="text-center h-20 w-20 flex items-center justify-center text-4xl border border-gray-100 rounded-xl" style="font-family: 'Candle Easter'">A
-                    </div>
-                    <!-- More characters... -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ad banner -->
-    <section class="">
-        <div class="max-w-[1400px] mx-auto px-3 py-4">
-            <div
-                class="relative bg-white rounded-3xl px-4 py-8 min-h-60 flex flex-col justify-center items-center overflow-hidden">
-                <h2 class="text-xl font-bold text-gray-700 mb-2">Ad Banner</h2>
-                <p class="text-gray-700 text-center text-sm">This is an ad banner. You can place your ad content here.
-                </p>
-                <label
-                    class="absolute top-6 -right-10 bg-gradient-to-l from-primary-dark to-primary text-white w-[150px] rotate-[45deg] text-sm py-1 text-center">Sponsored</label>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="py-4">
-        <div class="max-w-[1400px] w-full m-auto px-3">
-            <div
-                class="bg-gradient-to-l from-primary-dark to-primary h-[315px] flex flex-col justify-center rounded-3xl flex-col items-center gap-3 px-4">
-                <h1 class="text-4xl font-bold text-white">Newsletter</h1>
-                <p class="text-white text-sm max-w-[450px] text-center">Subscribe to our Newsletter so you get a
-                    notification whenever a new font is updated</p>
-                <form action="" class="relative max-w-[315px] w-full flex items-center">
-                    <input type="email" name="" id="" placeholder="Email"
-                        class="w-full h-10 outline-none pl-4 pr-10 text-gray-700 text-sm font-light rounded-full">
-                    <button class="absolute right-3 text-gray-700 hover:text-primary">
-                        <i class="fi fi-rr-bell inline-block translate-y-0.5"></i>
-                    </button>
                 </form>
             </div>
         </div>
@@ -246,7 +211,8 @@
     </section>
 
     <!-- general scripts -->
-    <script src="../../assets/js/script.js"></script>
+    <script src="../../../assets/js/script.js"></script>
+
 
 </body>
 
