@@ -11,9 +11,6 @@
     <link rel="shortcut icon" href="../../assets/images/logo/favicon.svg" type="image/x-icon">
     <title>FreeFont – Discover and Download Free Fonts for Designers & Creators</title>
 
-    <!-- Bootstrap Icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <!-- tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -78,23 +75,13 @@
                 <!-- desktop menu -->
                 <ul class="hidden w-fit md:flex text-gray-500 text-sm">
                     <li>
-                        <a href="/" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Home</a>
+                        <a href="/admin" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Home</a>
                     </li>
                     <li>
-                        <a href="/fonts" class="py-[25px] lg:px-6 px-3 bg-primary/5 text-primary">Fonts</a>
+                        <a href="/admin/fonts" class="py-[25px] lg:px-6 px-3 bg-primary/5 text-primary">Fonts</a>
                     </li>
                     <li>
-                        <a href="/fonts/themes" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Themes</a>
-                    </li>
-                    <li>
-                        <a href="/authors" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Authors</a>
-                    </li>
-                    <li>
-                        <a href="/faqs" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">FAQs</a>
-                    </li>
-                    <li>
-                        <a href="/register" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Sign
-                            Up</a>
+                        <a href="/admin/users" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Users</a>
                     </li>
                 </ul>
 
@@ -102,29 +89,19 @@
                 <ul id="menu"
                     class="md:hidden absolute top-16 py-10 left-0 bg-white w-full flex flex-col items-center text-sm gap-4 -translate-y-[750px] rounded-b-3xl shadow-xl duration-300 ease-in-out z-10">
                     <li>
-                        <a href="/" class="py-2 lg:px-6 px-3 text-gray-700">Home</a>
+                        <a href="/admin" class="py-2 lg:px-6 px-3 text-gray-700">Home</a>
                     </li>
                     <li>
-                        <a href="/fonts" class="py-2 lg:px-6 px-3 text-primary">Fonts</a>
+                        <a href="/admin/fonts" class="py-2 lg:px-6 px-3 text-primary">Fonts</a>
                     </li>
                     <li>
-                        <a href="/fonts/themes" class="py-2 lg:px-6 px-3 text-gray-700">Themes</a>
-                    </li>
-                    <li>
-                        <a href="/authors" class="py-2 lg:px-6 px-3 text-gray-700">Authors</a>
-                    </li>
-                    <li>
-                        <a href="/faqs" class="py-2 lg:px-6 px-3 text-gray-700">FAQs</a>
-                    </li>
-                    <li>
-                        <a href="/register" class="py-2 lg:px-6 px-3 text-gray-700">Sign Up</a>
+                        <a href="/admin/users" class="py-2 lg:px-6 px-3 text-gray-700">Users</a>
                     </li>
                 </ul>
 
             </div>
         </div>
     </nav>
-
 
     <section class="py-8">
         <div class="max-w-[1400px] w-full m-auto px-3">
@@ -149,6 +126,11 @@
                             <option>Sort by Newest</option>
                             <option>Sort by Popular</option>
                         </select>
+
+                        <a href="/admin/fonts/new"
+                            class="min-w-fit bg-primary text-white px-4 py-2 rounded-xl flex items-center text-sm hover:bg-primary/90">
+                            <i class="fi fi-rr-add text-lg mt-0.5 mr-1"></i> Add New Font
+                        </a>
                     </div>
                 </div>
             </div>
