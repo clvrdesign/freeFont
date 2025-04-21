@@ -113,9 +113,17 @@
             <div class="flex-1">
                 <div class="bg-white rounded-2xl shadow-lg shadow-gray-100 overflow-hidden">
                     <!-- Profile Header -->
-                    <div class="bg-white sm:px-6 px-3 py-4 border-b border-gray-100">
-                        <h2 class="text-xl font-bold text-gray-700">Upload New Font</h2>
-                        <small class="text-gray-500">Upload your font files to add them to the library</small>
+                    <div class="sm:px-6 px-3 py-4 bg-white border-b border-gray-100 flex gap-4 md:justify-between justify-start md:items-center items-start md:flex-row flex-col">
+                        <div class="">
+                            <h2 class="text-xl font-bold text-gray-700">Upload New Font</h2>
+                            <small class="text-gray-500">Upload your font files to add them to the library</small>
+                        </div>
+                        <div class="">
+                            <a href="/admin/fonts/new"
+                                class="min-w-fit h-10 bg-primary text-white px-4 py-2 rounded-xl flex items-center text-sm hover:bg-primary/90">
+                                <i class="fi fi-rr-list text-lg mt-0.5 mr-1"></i> Fonts
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Upload Form -->
@@ -168,7 +176,7 @@
                                         <div>
                                             <label for="fontDescription"
                                                 class="text-xs text-gray-500 mb-1">Designer</label>
-                                                <input
+                                            <input
                                                 class="w-full text-sm font-light text-gray-700 bg-gray-100 border focus:outline-none border-gray-200 rounded-lg px-3 py-2 focus:ring-gray-200"></input>
                                         </div>
                                         <div>
