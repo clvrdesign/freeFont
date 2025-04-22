@@ -127,27 +127,24 @@
 
 
     <!-- Recent fonts -->
-    <section class="py-8">
+    <section class="py-4">
         <div class="max-w-[1400px] w-full m-auto px-3">
-            <h1 class="text-2xl font-bold text-gray-700 mb-6">Admin Dashboard</h1>
-
             <!-- Vertical Stats Layout -->
-            <div class="flex flex-col lg:flex-row gap-6 mb-8">
+            <div class="flex flex-col lg:flex-row gap-4 mb-4">
                 <!-- Main Stats Card (Left Side) -->
-                <div class="bg-white rounded-2xl p-6 lg:w-2/3">
-                    <h2 class="text-xl font-semibold text-gray-700 mb-6">Platform Overview</h2>
-
+                <div class="w-full lg:w-2/3 bg-white rounded-2xl p-6 flex flex-col gap-4">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-3 sm:mb-0">Platform overview</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <!-- Stat Card 1 -->
-                        <div class="flex gap-4">
-                            <div class="text-3xl text-primary">
+                        <div class="relative bg-primary/5 hover:bg-primary group rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4 duration-300">
+                            <div class="text-3xl text-gray-300 group-hover:text-white">
                                 <i class="fi fi-rr-text"></i>
                             </div>
                             <div>
-                                <p class="text-gray-500 text-sm">Total Fonts</p>
+                                <p class="text-gray-500 text-sm group-hover:text-white duration-300">Total Fonts</p>
                                 <div class="flex items-end gap-2">
-                                    <h3 class="text-2xl font-bold text-gray-700">1,248</h3>
-                                    <span class="text-green-500 text-sm flex items-center">
+                                    <h3 class="text-2xl font-bold text-gray-700 group-hover:text-white duration-300">1,248</h3>
+                                    <span class="absolute top-6 right-6 text-green-500 text-sm flex items-center group-hover:text-white duration-300">
                                         <i class="bi bi-arrow-up-short"></i> 12%
                                     </span>
                                 </div>
@@ -155,15 +152,15 @@
                         </div>
 
                         <!-- Stat Card 1 -->
-                        <div class="flex gap-4">
-                            <div class="text-3xl text-green-500">
+                        <div class="relative bg-green-500/5 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
+                            <div class="text-3xl text-gray-300">
                                 <i class="fi fi-rr-cloud-download-alt"></i>
                             </div>
                             <div>
                                 <p class="text-gray-500 text-sm">Today's Downloads</p>
                                 <div class="flex items-end gap-2">
-                                    <h3 class="text-2xl font-bold text-gray-700">342</h3>
-                                    <span class="text-green-500 text-sm flex items-center">
+                                    <h3 class="text-2xl font-bold text-gray-700">345</h3>
+                                    <span class="absolute top-6 right-6 text-green-500 text-sm flex items-center">
                                         <i class="bi bi-arrow-up-short"></i> 8%
                                     </span>
                                 </div>
@@ -171,15 +168,15 @@
                         </div>
 
                         <!-- Stat Card 1 -->
-                        <div class="flex gap-4">
-                            <div class="text-3xl text-blue-500">
+                        <div class="relative bg-amber-500/5 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
+                            <div class="text-3xl text-gray-300">
                                 <i class="fi fi-rr-users"></i>
                             </div>
                             <div>
                                 <p class="text-gray-500 text-sm">Registered Users</p>
                                 <div class="flex items-end gap-2">
                                     <h3 class="text-2xl font-bold text-gray-700">5,672</h3>
-                                    <span class="text-green-500 text-sm flex items-center">
+                                    <span class="absolute top-6 right-6 text-green-500 text-sm flex items-center">
                                         <i class="bi bi-arrow-up-short"></i> 5%
                                     </span>
                                 </div>
@@ -187,20 +184,21 @@
                         </div>
 
                         <!-- Stat Card 1 -->
-                        <div class="flex gap-4">
-                            <div class="text-3xl text-yellow-500">
+                        <div class="relative bg-gray-50 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
+                            <div class="text-3xl text-gray-300">
                                 <i class="fi fi-rr-comment"></i>
                             </div>
                             <div>
                                 <p class="text-gray-500 text-sm">Pending Reviews</p>
                                 <div class="flex items-end gap-2">
                                     <h3 class="text-2xl font-bold text-gray-700">12</h3>
-                                    <span class="text-red-500 text-sm flex items-center">
+                                    <span class="absolute top-6 right-6 text-rose-500 text-sm flex items-center">
                                         <i class="bi bi-arrow-down-short"></i> 3%
                                     </span>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
