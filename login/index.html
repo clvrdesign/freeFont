@@ -42,17 +42,6 @@
         </div>
     </div>
 
-    <!-- Ad banner -->
-    <section class="hidden bg-primary z-50">
-        <div class="max-w-[1400px] mx-auto px-3 py-4">
-            <div class="bg-white rounded-xl p-4 flex flex-col items-center">
-                <h2 class="text-xl font-bold text-gray-700 mb-4">Ad Banner</h2>
-                <p class="text-gray-700 text-center text-sm">This is an ad banner. You can place your ad content here.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!-- navbar -->
     <nav class="sticky top-0 w-full h-16 flex items-center bg-white md:overflow-hidden overflow-unset z-50">
         <div class="max-w-[1400px] w-full m-auto px-3">
@@ -126,28 +115,32 @@
 
     <!-- Login -->
     <section class="h-[calc(100vh-175px)] py-10">
-        <div class="max-w-[1400px] w-full h-full m-auto px-3">
-            <div class="w-full h-full flex flex-col justify-center items-center gap-3">
-                <div class="w-full max-w-[350px] bg-white shadow-lg shadow-gray-200 rounded-3xl py-14 px-6">
-                    <h2 class="text-3xl text-primary text-center font-semibold mb-6">
-                        Login
-                    </h2>
-
-                    <form action="" class="flex flex-col gap-2 mt-6">
-                        <input type="email" name="email" placeholder="Email"
-                            class="w-full h-10 outline-none bg-gray-100 px-4 text-gray-700 text-sm font-light rounded-xl border border-transparent focus:border-gray-200 duration-300">
-                        <input type="password" name="password" placeholder="Password"
-                            class="w-full h-10 outline-none bg-gray-100 px-4 text-gray-700 text-sm font-light rounded-xl border border-transparent focus:border-gray-200 duration-300">
-                        <button
-                            class="w-full h-10 outline-none bg-primary text-white px-4 text-gray-700 text-md font-semibold rounded-xl duration-300">
+        <section class="h-[calc(100vh-175px)] py-10">
+            <div class="max-w-[1400px] w-full h-full m-auto px-3">
+                <div class="w-full h-full flex flex-col justify-center items-center gap-3">
+                    <div class="w-full max-w-[350px] sm:bg-white bg-transparent rounded-3xl py-14 sm:px-6 px-0">
+                        <h2 class="text-3xl text-gray-700 text-center font-semibold mb-6">
                             Login
-                        </button>
-                    </form>
-                    <small class="block text-gray-500 text-center mt-4">Already have an account? <a href="/sign-up/"
-                            class="text-primary">Sign Up</a></small>
+                        </h2>
+                        <small class="block bg-green-500/10 text-green-700 border border-green-200 p-4 rounded-xl font-light"> 
+                            Please enter your details to create an account.
+                        </small>
+                        <form action="" class="flex flex-col gap-2 mt-4">
+                            <input type="email" name="email" placeholder="Email"
+                                class="w-full h-10 outline-none sm:bg-gray-100 bg-white px-4 text-gray-700 text-sm font-light rounded-xl border border-transparent focus:border-gray-200 duration-300">
+                            <input type="password" name="password" placeholder="Password"
+                                class="w-full h-10 outline-none sm:bg-gray-100 bg-white px-4 text-gray-700 text-sm font-light rounded-xl border border-transparent focus:border-gray-200 duration-300">
+                            <button
+                                class="w-full h-10 outline-none bg-primary text-white px-4 text-gray-700 text-md font-semibold rounded-xl duration-300">
+                                Login
+                            </button>
+                        </form>
+                        <small class="block text-gray-500 text-center mt-4">Don't have an account? <a href="/sign-up"
+                                class="text-primary">Sign up</a></small>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 
     <!-- copyright -->
