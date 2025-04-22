@@ -62,13 +62,6 @@
                         <img class="h-10" src="../../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
                     </a>
                     <div class="flex items-center gap-3">
-                        <form action="" class="relative lg:max-w-[315px] max-w-[250px] w-full flex items-center">
-                            <input type="search" name="" id="" placeholder="Search..."
-                                class="w-full h-10 outline-none pl-4 pr-10 bg-gray-100 text-gray-700 text-sm font-light rounded-full">
-                            <button class="absolute right-3 text-gray-500 hover:text-primary">
-                                <i class="fi fi-rr-search inline-block translate-y-0.5"></i>
-                            </button>
-                        </form>
                         <div id="toggleMenu" class="md:hidden block text-gray-500 text-lg cursor-pointer">
                             <i class="fi fi-rr-bars-staggered inline-block translate-y-0.5"></i>
                         </div>
@@ -82,6 +75,9 @@
                     </li>
                     <li>
                         <a href="/admin/fonts" class="py-[25px] lg:px-6 px-3 bg-primary/5 text-primary">Fonts</a>
+                    </li>
+                    <li>
+                        <a href="/admin/activities" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Activities</a>
                     </li>
                     <li>
                         <a href="/admin/users" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Users</a>
@@ -98,6 +94,9 @@
                         <a href="/admin/fonts" class="py-2 lg:px-6 px-3 text-primary">Fonts</a>
                     </li>
                     <li>
+                        <a href="/admin/activities" class="py-2 lg:px-6 px-3 text-gray-700">Activities</a>
+                    </li>
+                    <li>
                         <a href="/admin/users" class="py-2 lg:px-6 px-3 text-gray-700">Users</a>
                     </li>
                 </ul>
@@ -107,7 +106,7 @@
     </nav>
 
     <!-- Add new -->
-    <section class="sm:py-8 py-4">
+    <section class="py-4">
         <div class="max-w-[1400px] w-full m-auto px-3">
             <!-- Upload Content -->
             <div class="flex-1">
@@ -120,8 +119,8 @@
                         </div>
                         <div class="">
                             <a href="/admin/fonts/new"
-                                class="min-w-fit h-10 bg-primary text-white px-4 py-2 rounded-xl flex items-center text-sm hover:bg-primary/90">
-                                <i class="fi fi-rr-list text-lg mt-0.5 mr-1"></i> Fonts
+                                class="min-w-fit h-10 bg-primary text-white px-4 py-2 rounded-lg flex items-center text-sm hover:bg-primary/90">
+                                <i class="fi fi-rr-list text-md inline-block mt-1 mr-1"></i> Fonts
                             </a>
                         </div>
                     </div>
@@ -264,17 +263,6 @@
         </div>
     </section>
 
-    <!-- copyright -->
-    <section class="py-10">
-        <div class="max-w-[1400px] w-full m-auto px-3">
-            <div class="flex md:flex-row flex-col justify-center items-center gap-3">
-                <small class="text-gray-500">&copy; <span id="copyright"></span> FreeFont. All rights reserved
-                </small>
-                <small class="text-gray-500">Font submission <a href="/agreement" class="text-primary">Agreement</a>
-                </small>
-            </div>
-        </div>
-    </section>
 
     <!-- general scripts -->
     <script src="../../../assets/js/script.js"></script>

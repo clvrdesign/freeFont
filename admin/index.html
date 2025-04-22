@@ -59,16 +59,9 @@
             <div class="w-full flex justify-between items-center">
                 <div class="md:w-fit w-full md:justify-start justify-between items-center flex gap-4 z-20">
                     <a href="/">
-                        <img class="h-10" src="../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
+                        <img class="h-10" src="../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
                     </a>
                     <div class="flex items-center gap-3">
-                        <form action="" class="relative lg:max-w-[315px] max-w-[250px] w-full flex items-center">
-                            <input type="search" name="" id="" placeholder="Search..."
-                                class="w-full h-10 outline-none pl-4 pr-10 bg-gray-100 text-gray-700 text-sm font-light rounded-full">
-                            <button class="absolute right-3 text-gray-500 hover:text-primary">
-                                <i class="fi fi-rr-search inline-block translate-y-0.5"></i>
-                            </button>
-                        </form>
                         <div id="toggleMenu" class="md:hidden block text-gray-500 text-lg cursor-pointer">
                             <i class="fi fi-rr-bars-staggered inline-block translate-y-0.5"></i>
                         </div>
@@ -78,23 +71,16 @@
                 <!-- desktop menu -->
                 <ul class="hidden w-fit md:flex text-gray-500 text-sm">
                     <li>
-                        <a href="/" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Home</a>
+                        <a href="/admin" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Home</a>
                     </li>
                     <li>
-                        <a href="/fonts" class="py-[25px] lg:px-6 px-3 bg-primary/5 text-primary">Fonts</a>
+                        <a href="/admin/fonts" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Fonts</a>
                     </li>
                     <li>
-                        <a href="/fonts/themes" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Themes</a>
+                        <a href="/admin/activities" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Activities</a>
                     </li>
                     <li>
-                        <a href="/authors" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Authors</a>
-                    </li>
-                    <li>
-                        <a href="/faqs" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">FAQs</a>
-                    </li>
-                    <li>
-                        <a href="/register" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Sign
-                            Up</a>
+                        <a href="/admin/users" class="py-[25px] lg:px-6 px-3 bg-primary/5 text-primary">Users</a>
                     </li>
                 </ul>
 
@@ -102,29 +88,22 @@
                 <ul id="menu"
                     class="md:hidden absolute top-16 py-10 left-0 bg-white w-full flex flex-col items-center text-sm gap-4 -translate-y-[750px] rounded-b-3xl shadow-xl duration-300 ease-in-out z-10">
                     <li>
-                        <a href="/" class="py-2 lg:px-6 px-3 text-gray-700">Home</a>
+                        <a href="/admin" class="py-2 lg:px-6 px-3 text-gray-700">Home</a>
                     </li>
                     <li>
-                        <a href="/fonts" class="py-2 lg:px-6 px-3 text-primary">Fonts</a>
+                        <a href="/admin/fonts" class="py-2 lg:px-6 px-3 text-gray-700">Fonts</a>
                     </li>
                     <li>
-                        <a href="/fonts/themes" class="py-2 lg:px-6 px-3 text-gray-700">Themes</a>
+                        <a href="/admin/activities" class="py-2 lg:px-6 px-3 text-gray-700">Activities</a>
                     </li>
                     <li>
-                        <a href="/authors" class="py-2 lg:px-6 px-3 text-gray-700">Authors</a>
-                    </li>
-                    <li>
-                        <a href="/faqs" class="py-2 lg:px-6 px-3 text-gray-700">FAQs</a>
-                    </li>
-                    <li>
-                        <a href="/register" class="py-2 lg:px-6 px-3 text-gray-700">Sign Up</a>
+                        <a href="/admin/users" class="py-2 lg:px-6 px-3 text-primary">Users</a>
                     </li>
                 </ul>
 
             </div>
         </div>
     </nav>
-
 
     <!-- Recent fonts -->
     <section class="py-4">
@@ -136,15 +115,15 @@
                     <h2 class="text-xl font-semibold text-gray-700 mb-3 sm:mb-0">Platform overview</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <!-- Stat Card 1 -->
-                        <div class="relative bg-primary/5 hover:bg-primary group rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4 duration-300">
-                            <div class="text-3xl text-gray-300 group-hover:text-white">
+                        <div class="relative bg-primary/5 hover:bg-primary/10 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
+                            <div class="text-3xl text-primary">
                                 <i class="fi fi-rr-text"></i>
                             </div>
                             <div>
-                                <p class="text-gray-500 text-sm group-hover:text-white duration-300">Total Fonts</p>
+                                <p class="text-gray-500 text-sm">Total Fonts</p>
                                 <div class="flex items-end gap-2">
-                                    <h3 class="text-2xl font-bold text-gray-700 group-hover:text-white duration-300">1,248</h3>
-                                    <span class="absolute top-6 right-6 text-green-500 text-sm flex items-center group-hover:text-white duration-300">
+                                    <h3 class="text-2xl font-bold text-gray-700">1,248</h3>
+                                    <span class="absolute top-6 right-6 text-green-500 text-sm flex items-center">
                                         <i class="bi bi-arrow-up-short"></i> 12%
                                     </span>
                                 </div>
@@ -152,8 +131,8 @@
                         </div>
 
                         <!-- Stat Card 1 -->
-                        <div class="relative bg-green-500/5 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
-                            <div class="text-3xl text-gray-300">
+                        <div class="relative bg-green-500/5 hover:bg-green-500/10 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
+                            <div class="text-3xl text-green-500">
                                 <i class="fi fi-rr-cloud-download-alt"></i>
                             </div>
                             <div>
@@ -168,8 +147,8 @@
                         </div>
 
                         <!-- Stat Card 1 -->
-                        <div class="relative bg-amber-500/5 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
-                            <div class="text-3xl text-gray-300">
+                        <div class="relative bg-amber-500/5 hover:bg-amber-500/10 rounded-r-2xl p-6 lg:w-2/3 flex flex-col gap-4">
+                            <div class="text-3xl text-amber-500">
                                 <i class="fi fi-rr-users"></i>
                             </div>
                             <div>
@@ -184,8 +163,8 @@
                         </div>
 
                         <!-- Stat Card 1 -->
-                        <div class="relative bg-gray-50 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
-                            <div class="text-3xl text-gray-300">
+                        <div class="relative bg-gray-50 hover:bg-gray-100 rounded-2xl p-6 lg:w-2/3 flex flex-col gap-4">
+                            <div class="text-3xl text-gray-500">
                                 <i class="fi fi-rr-comment"></i>
                             </div>
                             <div>
@@ -403,18 +382,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- copyright -->
-    <section class="py-10">
-        <div class="max-w-[1400px] w-full m-auto px-3">
-            <div class="flex md:flex-row flex-col justify-center items-center gap-3">
-                <small class="text-gray-500">&copy; <span id="copyright"></span> FreeFont. All rights reserved
-                </small>
-                <small class="text-gray-500">Font submission <a href="/agreement" class="text-primary">Agreement</a>
-                </small>
             </div>
         </div>
     </section>

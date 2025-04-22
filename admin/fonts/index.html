@@ -59,13 +59,6 @@
                         <img class="h-10" src="../../assets/images/logo/freeFontLogo_Blue.svg" alt="logo">
                     </a>
                     <div class="flex items-center gap-3">
-                        <form action="" class="relative lg:max-w-[315px] max-w-[250px] w-full flex items-center">
-                            <input type="search" name="" id="" placeholder="Search..."
-                                class="w-full h-10 outline-none pl-4 pr-10 bg-gray-100 text-gray-700 text-sm font-light rounded-full">
-                            <button class="absolute right-3 text-gray-500 hover:text-primary">
-                                <i class="fi fi-rr-search inline-block translate-y-0.5"></i>
-                            </button>
-                        </form>
                         <div id="toggleMenu" class="md:hidden block text-gray-500 text-lg cursor-pointer">
                             <i class="fi fi-rr-bars-staggered inline-block translate-y-0.5"></i>
                         </div>
@@ -79,6 +72,9 @@
                     </li>
                     <li>
                         <a href="/admin/fonts" class="py-[25px] lg:px-6 px-3 bg-primary/5 text-primary">Fonts</a>
+                    </li>
+                    <li>
+                        <a href="/admin/activities" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Activities</a>
                     </li>
                     <li>
                         <a href="/admin/users" class="py-[25px] lg:px-6 px-3 hover:bg-gray-50">Users</a>
@@ -95,6 +91,9 @@
                         <a href="/admin/fonts" class="py-2 lg:px-6 px-3 text-primary">Fonts</a>
                     </li>
                     <li>
+                        <a href="/admin/activities" class="py-2 lg:px-6 px-3 text-gray-700">Activities</a>
+                    </li>
+                    <li>
                         <a href="/admin/users" class="py-2 lg:px-6 px-3 text-gray-700">Users</a>
                     </li>
                 </ul>
@@ -103,10 +102,9 @@
         </div>
     </nav>
 
-    <section class="py-8">
+    <section class="py-4">
         <div class="max-w-[1400px] w-full m-auto px-3">
-            <h1 class="text-2xl font-bold text-gray-700 mb-6">User Management</h1>
-
+            
             <!-- Search and Filters -->
             <div class="bg-white rounded-2xl p-4 mb-6">
                 <div class="flex flex-col md:flex-row gap-4">
@@ -128,14 +126,16 @@
                         </select>
 
                         <a href="/admin/fonts/new"
-                            class="min-w-fit bg-primary text-white px-4 py-2 rounded-xl flex items-center text-sm hover:bg-primary/90">
-                            <i class="fi fi-rr-add text-lg mt-0.5 mr-1"></i> Add New Font
+                            class="min-w-fit bg-primary text-white px-4 py-2 rounded-lg flex items-center text-sm hover:bg-primary/90">
+                            <i class="fi fi-rr-add text-md inline-block mt-1 mr-1"></i> Add New Font
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Users Table -->
+            <h1 class="text-2xl font-bold text-gray-700 mb-6">Font Management</h1>
+
             <div class="bg-white rounded-2xl overflow-hidden">
                 <table class="w-full overflow-x-auto">
                     <thead class="bg-gray-50">
@@ -273,18 +273,6 @@
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- copyright -->
-    <section class="py-10">
-        <div class="max-w-[1400px] w-full m-auto px-3">
-            <div class="flex md:flex-row flex-col justify-center items-center gap-3">
-                <small class="text-gray-500">&copy; <span id="copyright"></span> FreeFont. All rights reserved
-                </small>
-                <small class="text-gray-500">Font submission <a href="/agreement" class="text-primary">Agreement</a>
-                </small>
             </div>
         </div>
     </section>
