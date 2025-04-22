@@ -125,7 +125,7 @@
   </nav>
 
   <!-- Main Content -->
-  <section class="relative md:py-8 sm:py-4">
+  <section class="relative py-4 px-2">
     <div class="max-w-[1400px] w-full m-auto sm:px-3">
       <div class="flex flex-col md:flex-row gap-4">
         <!-- Sidebar Navigation -->
@@ -315,7 +315,22 @@
   </section>
 
   <!-- general scripts -->
-  <script src="../../assets/js/script.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script>
+    // profile image preview
+    const profileInput = document.getElementById('profile');
+    const profilePreview = document.getElementById('profilePreview');
+    profileInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profilePreview.setAttribute('src', e.target.result);
+        }
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 
 </body>
 

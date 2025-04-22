@@ -125,7 +125,7 @@
   </nav>
 
   <!-- Main Content -->
-  <section class="relative md:py-8 sm:py-4">
+  <section class="relative py-4 px-2">
     <div class="max-w-[1400px] w-full m-auto sm:px-3">
       <div class="flex flex-col md:flex-row gap-4">
         <!-- Sidebar Navigation -->
@@ -166,153 +166,167 @@
                 <h2 class="text-xl font-bold text-gray-700">My Uploads</h2>
                 <small class="text-gray-500">Fonts you've contributed</small>
               </div>
-              <a href="/admin/fonts/new"
-                class="min-w-fit bg-primary text-white px-4 py-2 rounded-xl flex items-center text-sm hover:bg-primary/90">
-                <i class="fi fi-rr-add text-lg mt-0.5 mr-1"></i> Upload New
+              <a href="/user/uploads/new"
+                class="min-w-fit bg-primary text-white px-4 py-2 rounded-lg flex items-center text-sm hover:bg-primary/90">
+                <i class="fi fi-rr-add text-sm inline-block mt-1 mr-1"></i> Upload New
               </a>
             </div>
 
             <!-- Profile Form -->
             <div class="md:px-6 sm:px-3 px-0">
-              <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200 my-4">
-                  <thead class="bg-primary/5">
-                    <tr>
-                      <th class="sm:px-6 px-3 py-3 text-left text-sm font-medium text-gray-700">Font Name</th>
-                      <th class="sm:px-6 px-3 py-3 text-left text-sm font-medium text-gray-700">Theme</th>
-                      <th class="sm:px-6 px-3 py-3 text-left text-sm font-medium text-gray-700">Style</th>
-                      <th class="sm:px-6 px-3 py-3 text-left text-sm font-medium text-gray-700">Downloads</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-gray-200">
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
+              <div class="bg-white overflow-hidden">
+                <div class="overflow-x-auto">
+                  <table class="w-full divide-y divide-gray-200">
+                    <thead class="sticky top-0">
+                      <tr>
+                        <th class="sm:px-6 px-3 py-3 text-left text-sm font-medium text-gray-700 whitespace-nowrap">FONT
+                          NAME</th>
+                        <th class="sm:px-6 px-3 py-3 text-left text-sm font-medium text-gray-700 whitespace-nowrap">
+                          THEME</th>
+                        <th class="sm:px-6 px-3 py-3 text-left text-sm font-medium text-gray-700 whitespace-nowrap">
+                          STYLE</th>
+                        <th class="sm:px-6 px-3 py-3 text-left text-sm font-medium text-gray-700 whitespace-nowrap">
+                          DOWNLOADS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 bg-white">
+                      <!-- Row 1 -->
+                      <tr>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <span class="font-medium text-gray-500 text-sm">Roboto Flex romain</span>
+                          </div>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Fancy</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Comic</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap text-sm text-gray-500">12,459</td>
+                      </tr>
+
+                      <!-- Row 2 -->
+                      <tr>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
+                          </div>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Fancy</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Comic</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap text-sm text-gray-500">12,459</td>
+                      </tr>
+
+                      <!-- Row 3-8 (same pattern) -->
+                      <tr>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
+                          </div>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Fancy</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Comic</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap text-sm text-gray-500">12,459</td>
+                      </tr>
+
+                      <tr>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
+                          </div>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Fancy</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Comic</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap text-sm text-gray-500">12,459</td>
+                      </tr>
+
+                      <tr>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
+                          </div>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Fancy</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Comic</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap text-sm text-gray-500">12,459</td>
+                      </tr>
+
+                      <tr>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
+                          </div>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Fancy</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Comic</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap text-sm text-gray-500">12,459</td>
+                      </tr>
+
+                      <tr>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
+                          </div>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Fancy</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Comic</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap text-sm text-gray-500">12,459</td>
+                      </tr>
+
+                      <tr>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
+                          </div>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Fancy</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap">
+                          <span class="text-sm text-gray-600">Comic</span>
+                        </td>
+                        <td class="sm:px-6 px-3 py-4 whitespace-nowrap text-sm text-gray-500">12,459</td>
+                      </tr>
+                    </tbody>
+                    
+                  </table>
+                </div>
+                <div class="bg-white sm:px-6 px-3 py-4 border-t border-gray-200">
+                  <tr class="">
+                    <td colspan="4" class="sm:px-6 px-3 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+                      <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Showing 1 to 8 of 8 entries</span>
+                        <div class="flex items-center gap-2">
                         </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
-                        </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
-                        </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
-                        </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
-                        </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
-                        </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
-                        </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
-                        </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                    <tr>
-                      <td class="sm:px-6 px-3 py-4">
-                        <div class="flex items-center">
-                          <span class="font-medium text-gray-500 text-sm">Roboto Flex</span>
-                        </div>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Fancy</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4">
-                        <span class="text-sm text-gray-600">Comic</span>
-                      </td>
-                      <td class="sm:px-6 px-3 py-4 text-sm text-gray-500">12,459</td>
-                    </tr>
-                  </tbody>
-                </table>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
               </div>
             </div>
           </div>
