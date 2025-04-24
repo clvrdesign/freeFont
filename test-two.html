@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | Fontify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Sidebar + Main Content Layout -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <div class="w-64 bg-gray-800 text-white min-h-screen p-4">
+      <h1 class="text-xl font-bold mb-8">Fontify Admin</h1>
+      <nav>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded">
+              <i class="fas fa-chart-bar"></i> Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded">
+              <i class="fas fa-font"></i> Font Queue (3)
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded">
+              <i class="fas fa-users"></i> Users
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 rounded">
+              <i class="fas fa-money-bill-wave"></i> Payouts
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+      <h2 class="text-2xl font-bold mb-6">Font Moderation Queue</h2>
+      
+      <!-- Pending Fonts Table -->
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <table class="min-w-full">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left">Font Name</th>
+              <th class="px-6 py-3 text-left">Designer</th>
+              <th class="px-6 py-3 text-left">License</th>
+              <th class="px-6 py-3 text-left">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4">Summer Script</td>
+              <td class="px-6 py-4">user_4821</td>
+              <td class="px-6 py-4">
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Commercial</span>
+              </td>
+              <td class="px-6 py-4">
+                <button class="text-green-600 hover:text-green-800 mr-3">
+                  <i class="fas fa-check"></i> Approve
+                </button>
+                <button class="text-red-600 hover:text-red-800">
+                  <i class="fas fa-times"></i> Reject
+                </button>
+              </td>
+            </tr>
+            <!-- More rows -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Fraud Alerts Section -->
+      <h2 class="text-2xl font-bold mt-12 mb-6">Suspicious Activity</h2>
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm text-yellow-700">
+              User <span class="font-medium">designer_89</span> uploaded 12 fonts in 1 hour.
+              <a href="#" class="font-medium underline">Review now</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

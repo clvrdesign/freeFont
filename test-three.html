@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Fontify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- Reuse Navbar from Homepage -->
+
+  <section class="py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <!-- Progress Steps -->
+        <div class="border-b border-gray-200">
+          <nav class="flex">
+            <div class="w-1/3 py-4 text-center border-b-2 border-purple-600 font-medium">License</div>
+            <div class="w-1/3 py-4 text-center border-b-2 border-gray-200">Payment</div>
+            <div class="w-1/3 py-4 text-center border-b-2 border-gray-200">Download</div>
+          </nav>
+        </div>
+
+        <!-- License Selection -->
+        <div class="p-8">
+          <h2 class="text-2xl font-bold mb-6">Select a License</h2>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start">
+              <input type="radio" name="license" id="personal" class="mt-1 mr-3" checked>
+              <label for="personal">
+                <span class="block font-medium">Personal Use</span>
+                <span class="block text-gray-600 text-sm">Free - For non-commercial projects</span>
+              </label>
+            </div>
+            <div class="flex items-start">
+              <input type="radio" name="license" id="commercial" class="mt-1 mr-3">
+              <label for="commercial">
+                <span class="block font-medium">Commercial License</span>
+                <span class="block text-gray-600 text-sm">$29.99 - For logos, merchandise, etc.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Font Preview -->
+          <div class="bg-gray-100 p-6 rounded-lg mb-8">
+            <p class="text-3xl text-center" style="font-family: 'SampleFont'">The quick brown fox</p>
+            <p class="text-center mt-2 text-gray-600">Montserrat by Julieta Ulanovsky</p>
+          </div>
+
+          <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700">
+            Continue to Payment
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
